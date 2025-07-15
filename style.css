@@ -1,0 +1,8 @@
+*{
+    padding:0px;
+    margin:0px;
+    font-family:'Poppins',sans-serif;
+}
+body{
+    background-color: linear-gradient(to right, white,purple);
+}
