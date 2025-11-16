@@ -10,22 +10,31 @@ body{
     background-color:black;
     color:white;
 }
+h1{
+    color: rgb(24, 180, 198);
+    font-size: 50px;
+    margin:40px 0px 40px;
+}
 h2{
     margin: 20px 0 20px;
     color: rgb(24, 180, 198);
 }
 img{
-    width:500px;
+    width:400px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 5px;
+}
+img:hover{
+    cursor:pointer;
+    border:3px solid rgb(24, 180, 198);
+    border-radius:10px;
+}
+.container{
+    padding:20px 5%;
 }
 #header{
     width:100%;
     height:100vh;
-}
-.container{
-    padding:20px 5%;
-   
 }
 nav{
     display: flex;
@@ -36,6 +45,7 @@ nav{
 nav h1{
     font-size:50px;
     color: rgb(24, 180, 198);
+    align-self: center;
 }
 nav ul li{
     list-style:none;
@@ -70,21 +80,18 @@ nav ul li a{
     padding: 100px 50px;
     font-size: 20px;
 }
+.content span{
+    color: white;
+}
+.content h1{
+     color:rgb(24, 180, 198);
+}
 .content h3{
     margin-top: 30px;
     color:rgb(24, 180, 198);
 }
 .content p{
     margin-top: 20px;
-}
-.container h1{
-    font-size: 50px;
-    margin-bottom:40px;
-}
-h2{
-    font-size: 30px;
-    
-    color:rgb(24, 180, 198);
 }
 .project-list{
     display: grid;
@@ -93,18 +100,36 @@ h2{
     padding: 40px 40px;
     gap:40px;
 }
-
-.educationinfo{
-    margin: 40px;
+#education .container{
+    position: relative;
 }
-.form{
+.educationinfo{
+    margin: 80px;
+}
+#certifications .container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+.courses{
+    display:flex;
+    flex-direction: column;
+    max-width:900px;
     border: 2px solid rgb(24, 180, 198);
+    border-radius: 4px;
+    padding: 20px;
+    margin: 20px 80px;
+}
+
+.form{
+    border: 2px double rgb(24, 180, 198);
     border-radius: 10px;
-    margin:40px 40px ;
+    margin:40px 80px ;
     padding: 40px 40px;
     display: grid;
     height: auto;
-    width:600px;
+    max-width:900px;
     grid-template-columns:1fr 3fr;
     gap: 10px;
     align-items: center;
@@ -120,6 +145,23 @@ input{
     outline: none;
     border: none;
 }
-input.submit{
-    grid-column: 1/3;
+label{
+    color:rgb(24, 180, 198);
+}
+textarea{
+    border-radius: 4px;
+    padding:20px 20px;
+    outline: none;
+    border: none;
+}
+#message{
+    align-self: start;
+}
+button{
+    background-color:rgb(24, 180, 198);
+    color: white;
+    grid-column: 2/3;
+    justify-self:center;
+    padding:10px 50px;
+    cursor: pointer;
 }
