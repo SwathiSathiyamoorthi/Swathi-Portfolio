@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color:black;
+    background-color:rgb(0, 0, 0);
     color:white;
 }
 #header .container{
@@ -31,6 +31,13 @@ h1{
 h2{
     margin: 20px 0 20px;
     color: rgb(24, 180, 198);
+}
+p{
+    font-size:25px;
+}
+.content i{
+    font-size: 40px;
+    color: white;
 }
 .images{
     width:400px;
