@@ -1,5 +1,7 @@
 @import url("https://fonts.google.com/");
-
+html{
+    scroll-behavior:smooth;
+}
 *{
     padding:0px;
     margin:0px;
@@ -33,7 +35,7 @@ h2{
     color: rgb(24, 180, 198);
 }
 p{
-    font-size:25px;
+    font-size:20px;
 }
 .content i{
     font-size: 40px;
@@ -54,7 +56,7 @@ p{
 }
 #header{
     width:100%;
-    height:100vh;
+    min-height:900px;
 }
 nav{
     display: flex;
@@ -93,9 +95,10 @@ nav ul li a{
     width:100%;
 }
 .content{
-    display:flex column;
     text-align: center;
     height:80vh;
+    width: 100%;
+    justify-content: center;
     align-content: center;
     padding: 100px 50px;
     font-size: 20px;
@@ -113,6 +116,30 @@ nav ul li a{
 .content p{
     margin-top: 20px;
 }
+.content img{
+    width: 300px;
+    margin:30px;
+    border-radius: 20px;
+}
+.imagerow{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.imagess.active-img{
+    animation-name:slide;
+    animation-duration:2s;
+    animation-timing-function: linear;
+    animation-iteration-count:1;
+}
+@keyframes slide{
+    0%{
+        transform: scale(0.9);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
 .project-list{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -120,27 +147,80 @@ nav ul li a{
     padding: 40px 40px;
     gap:40px;
 }
-#education .container{
-    position: relative;
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:100px;
 }
-.educationinfo{
-    margin: 80px;
-}
-#certifications .container{
+.right-column{
     display: flex;
     flex-direction: column;
+}
+.tab-link{
+    display:grid;
+    grid-template-rows: repeat(2,auto);
+    gap:20px
+}
+.tab-titles p{
+    list-style: none;
+    display: inline;
+    font-size: 30px;
+    margin: 60px 40px 20px 0px;
+    position: relative;
+}
+.tab-links::after{
+    content:'';
+    width:0px;
+    height:3px;
+    background-color:rgb(24, 180, 198);
+    position: absolute;
+    left:0px;
+    bottom:-6px;
+    transition: 0.5s;
+}
+.tab-links.active-link:hover::after{
+    width:100%;
+}
+h3{
+    margin-left:20px;
+}
+.tab-content h2,h3{
+    margin:20px 0px 5px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+#aboutme .container img{
+    width:100%;
+    margin-top:20px;
+    border-radius: 10px;
+}
+.left-column p{
+    text-align: center;
+}
+.para{
+    font-size: 20px;
+}
+#certifications .container{
+    width: 100%;
+    /*display: flex;
+    flex-direction: column;*/
     align-content: center;
     justify-content: center;
 }
 .courses{
     display:flex;
     flex-direction: column;
-    max-width:900px;
+    width:900px;
     border: 2px solid rgb(24, 180, 198);
     border-radius: 4px;
     padding: 20px;
     margin: 20px 80px;
     position: relative;
+    justify-self:center;
 }
 .courses img{
     width: 150px;
@@ -148,23 +228,34 @@ nav ul li a{
     right: 50px;
     top:10px;
 }
+#contactme{
+    width:100%;
+    justify-content: center;
+}
+#contactme .container{
+    width: 100%;
+}
 .form{
-    border: 2px double rgb(24, 180, 198);
+    background-color: rgb(31, 30, 30);
+    border: none;
     border-radius: 10px;
     margin:40px 80px ;
     padding: 40px 40px;
     display: grid;
     height: auto;
-    max-width:900px;
+    width:900px;
     grid-template-columns:1fr 3fr;
     gap: 10px;
     align-items: center;
     justify-content: center;
+    justify-self: center;
 }
 label{
     font-size: 20px;
 }
 input{
+    background-color: gray;
+    color: white;
     height:40px;
     border-radius: 4px;
     padding:20px 20px;
@@ -172,9 +263,11 @@ input{
     border: none;
 }
 label{
-    color:rgb(24, 180, 198);
+    color:rgb(255, 255, 255);
 }
 textarea{
+    background-color: gray;
+    color: white;
     border-radius: 4px;
     padding:20px 20px;
     outline: none;
@@ -184,10 +277,33 @@ textarea{
     align-self: start;
 }
 button{
-    background-color:rgb(24, 180, 198);
+    background-color:rgb(5, 181, 200);
     color: white;
     grid-column: 2/3;
     justify-self:center;
     padding:10px 50px;
     cursor: pointer;
+    border-radius: 6px;
+}
+button:hover{
+    background-color:rgb(3, 59, 64);
+    color: rgb(202, 201, 201);
+}
+#msg{
+    grid-column-start: 2;
+    text-align: center;
+    color:rgb(24, 180, 198);
+    margin-top: 10px;
+    font-size: 20px;
+}
+#copyright{
+    background-color: gray;
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    padding:15px;
+    margin:0px;
+}
+#heart{
+    color:rgb(24, 180, 198);
 }

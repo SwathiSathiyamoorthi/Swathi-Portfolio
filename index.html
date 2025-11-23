@@ -4,6 +4,7 @@
         <title>Swathi Portfolio</title>
         <link rel="stylesheet" href="style.css">
         <script src="https://kit.fontawesome.com/095995a01b.js" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
     </head>
     <body>
         <div id="header">
@@ -14,9 +15,9 @@
                     <h1>Swathi</h1>
                     </div>
                     <ul class="links">
-                        <li><a href="#about">About</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#aboutme">About</a></li>
                         <li><a href="#projects">Projects</a></li>
-                        <li><a href="#education">Education</a></li>
                         <li><a href="#certifications">Certifications</a></li>
                         <li><a href="#contactme">Contact</a></li>
                     </ul>   
@@ -28,10 +29,58 @@
                     <i class="fa-brands fa-linkedin"></i>
                     <i class="fa-brands fa-github" style="color: #ffffff; font-size: 50px;"></i>
                     <i class="fa-brands fa-github"></i>
+                    <a href="https://linkedin.com/in/swathisathiyamoorthi">LinkedIn</a>
+                    <a href="https://github.com/SwathiSathiyamoorthi">GitHub</a>
+                    <div class="imagerow">
+                        <img class="imagess" src="assets/animationcard1.jpg">
+                        <img class="imagess" src="assets/animationcard2.webp">
+                        <img class="imagess" src="assets/animationcard3.webp">
+                    </div>
                 </div>
             </div>
         </div>
-    
+        <div id="aboutme">
+            <div class="container">
+                <h1>About Me</h1>
+                <div class="grid">
+                    <div class="left-column">
+                        <p>I am a computer science student and a front-end developer. Passionate about developing creative UI designs.Having good skills in front-end Development using HTML, CSS and Javascript. I have completed Fullstack Development course and Front-End Development course. I have done mini projects such as Calculator Application and To Do List Application.</p>
+                        <img src="assets/girl.jpeg">
+                    </div>
+                    <div class="right-column">
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                            <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                        </div>    
+                        <div class="tab-contents active-tab" id="education">
+                            <div class="education-details">
+                                <div class="educationinfo">
+                                    <h2>Jamal Mohamed College(2024-2026)</h2>
+                                    <h3>M.sc Computer Science - 86%</h3>
+                                    <p class="para">I am a fast learner with a passion for creativity.I served as a volunteer in my department's big event ITConnect2025.</p>
+                                </div>
+                                <div class="educationinfo">
+                                    <h2>Jamal Mohamed College(2021-2024)</h2>
+                                    <h3>B.sc Information Technology - 8.5 CGPA</h3>
+                                    <p class="para">During my college final year I participated in Poster Presentation and secured first prize. </p>
+                                </div>
+                                <div class="educationinfo">
+                                    <h2>G.G.Hr.Sec.School Keeranur(2020-2021)</h2>
+                                    <h3>HSC - 91%</h3>
+                                    <p class="para">During my school days I participated in many competitions.I am good at creative thinking I got many prizes in drawing competitions.</p>
+                                </div>
+                            </div>    
+                        </div>
+                        <div class="tab-contents" id="skills">
+                            <h3>HTML</h3>
+                            <h3>CSS</h3>   
+                            <h3>Javascript</h3>
+                            <h3>MySQL</h3>
+                        </div>  
+                    </div>
+                </div>    
+            </div>       
+        </div>
         <div id="projects">
             <div class="container">
                 <h1>Projects</h1>
@@ -39,7 +88,7 @@
                     <div class="pro 1">
                         <img class="images" src="assets/calculator.png">
                         <h2>Simple Calculator</h2>
-                        <p>This is a simple calculator application using HTML,CSS and Javascript.  We can perform simple arithmetic operations such as addition, subtraction, multiplication and divition.
+                        <p>This is a simple calculator application using HTML,CSS and Javascript.  We can perform simple arithmetic operations such as addition, subtraction, multiplication and division.
                         </p>
                     </div>
                     <div class="pro 3">
@@ -54,24 +103,6 @@
                         <p>This is a simple calculator application.HTML,CSS and Javascripts are used in this web page.
                         </p>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div id="education">
-            <div class="container">
-                <h1>Education</h1>
-                <div class="educationinfo">
-                    <h2>Jamal Mohamed College(2024-2026)</h2>
-                    <h3>M.sc Computer Science - 86%</h3>
-                    <i class="fa-brands fa-github" style="color:rgb(255, 255, 255);"></i>
-                </div>
-                <div class="educationinfo">
-                    <h2>Jamal Mohamed College(2021-2024)</h2>
-                    <h3>B.sc Information Technology - 8.5 CGPA</h3>
-                </div>
-                <div class="educationinfo">
-                    <h2>G.G.Hr.Sec.School Keeranur(2020-2021)</h2>
-                    <h3>HSC - 91%</h3>
                 </div>
             </div>
         </div>
@@ -102,18 +133,40 @@
         </div>
         <div id="contactme">
             <div class="container">
-                <h1>Contact</h1>
-                <div class="form">
-                <label>Your name</label>
-                <input type="text" name="name">
-                <label>Phone number</label>
-                <input type="text" name="phone-number">
-                <label>Mail Id</label>
-                <input type="text" name="mail-id">
-                <label id="message">Message</label>
-                <textarea rows="10"></textarea>
-                <button type="submit">Send Message</button>
+                <form name='submit-to-google-sheet'>
+                    <h1>Contact</h1>
+                    <div class="form">
+                    <label>Your name</label>
+                    <input type="text" name="Name">
+                    <label>Mobile Number</label>
+                    <input type="text" name="Mobile No">
+                    <label>Mail Id</label>
+                    <input type="text" name="Mail Id">
+                    <label id="message">Message</label>
+                    <textarea rows="10" name="Message"></textarea>
+                    <button type="submit" name="submit">Send Message</button>
+                    <span id="msg"></span>
+                </form>
             </div>
         </div>
+         <p id="copyright">Copyright &#169; 2025 Swathi. Made with <span id="heart" >&#9829;</span> by Swathi.</p>   
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyhpN70xRpsbDxnGsX7PZojxWzORkmm99o0GkkNF1MKm4hy0E-lbCt2PwB8sCRhEbYXdg/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById('msg');
+        form.addEventListener('submit', e => {
+         e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent successfully!!!"
+            setTimeout(function(){
+            msg.innerHTML=" "
+            },5000)
+            form.reset()
+        })
+         .catch(error => console.error('Error!', error.message))
+        })
+   
+    </script>
     </body>
 </html>
