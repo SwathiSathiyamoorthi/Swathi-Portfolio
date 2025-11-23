@@ -34,7 +34,7 @@ h2{
     margin: 20px 0 20px;
     color: rgb(24, 180, 198);
 }
-p{
+*p{
     font-size:20px;
 }
 .content i{
@@ -42,7 +42,7 @@ p{
     color: white;
 }
 .images{
-    width:400px;
+    width:300px;
     height: auto;
     border-radius: 5px;
 }
@@ -56,7 +56,7 @@ p{
 }
 #header{
     width:100%;
-    min-height:900px;
+    min-height:100vh;
 }
 nav{
     display: flex;
@@ -141,31 +141,39 @@ nav ul li a{
     }
 }
 .project-list{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin:40px 40px ;
     padding: 40px 40px;
     gap:40px;
+}
+.pro{
+    width: 300px;
 }
 .grid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
     gap:100px;
 }
+.right-column p{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
 .right-column{
     display: flex;
     flex-direction: column;
+    
 }
 .tab-link{
     display:grid;
     grid-template-rows: repeat(2,auto);
     gap:20px
 }
-.tab-titles p{
-    list-style: none;
+.tab-links{
     display: inline;
     font-size: 30px;
-    margin: 60px 40px 20px 0px;
+    margin: 100px 20px 20px 0px;
     position: relative;
 }
 .tab-links::after{
@@ -198,9 +206,6 @@ h3{
     margin-top:20px;
     border-radius: 10px;
 }
-.left-column p{
-    text-align: center;
-}
 .para{
     font-size: 20px;
 }
@@ -214,11 +219,11 @@ h3{
 .courses{
     display:flex;
     flex-direction: column;
-    width:900px;
+    width:100%;
     border: 2px solid rgb(24, 180, 198);
     border-radius: 4px;
     padding: 20px;
-    margin: 20px 80px;
+    margin:10px 5%;
     position: relative;
     justify-self:center;
 }
