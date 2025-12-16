@@ -34,6 +34,7 @@ h1{
     margin:20px 0px 40px;
 }
 h2{
+  
     margin: 20px 0 20px;
     color: rgb(24, 180, 198);
 }
@@ -209,25 +210,14 @@ a .so-link:hover{
     border-radius: 25px;
     scale: 0.9;
 }
-.project-list{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin:10px 5%;
-    gap:40px;
-}
-.prointro{
-    margin:10px 5% 20px;
-    font-size: 30px;
-}
-.pro{
-    width: 300px;
-}
 .grid{
     display:grid;
     grid-template-columns:2fr 3fr;
     gap:5%;
     margin:10px 5%;
+    animation:animate both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 60vh;
 }
 .grid img{
     height:470px;
@@ -289,6 +279,33 @@ h3{
 .educationinfo h3{
   color:rgb(24, 180, 198);;
 }
+.project-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:10px 5%;
+    gap:40px;
+}
+.pro{
+    width: 300px;
+    animation: slidi both;
+    animation-timeline: view();
+}
+@keyframes slidi{
+    from{
+        opacity:0;
+        transform: translateX(200px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.prointro{
+    margin:10px 5% 20px;
+    font-size: 30px;
+}
+
 #certifications .container{
     width: 100%;
     align-content: center;
@@ -298,18 +315,33 @@ h3{
     display:grid;
     grid-template-columns:auto auto;
     margin:10px 5%;
-    gap:10px;
+    gap:40px;
 }
 .courses{
     height:auto;
     display: grid;
     grid-auto-flow:column;
-    grid-template-rows:1fr 1fr;
+    grid-template-rows:auto auto;
+    justify-content:space-between;
     background-color: rgb(31, 30, 30);
     border: 2px solid rgb(24, 180, 198);
     border: none;
     border-radius: 4px;
     padding:15px;
+    animation: animate both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 60vh;
+
+}
+@keyframes animate{
+    from{
+        opacity: 0;
+        transform: translateY(100px) scale(0.7);
+    }
+    to{
+        opacity: 1;
+        transform:translateY(0) ;
+    }
 }
 .courses h2{
     margin: 0;
@@ -317,7 +349,8 @@ h3{
 }
 .courses img{
     grid-row: span 2;
-    width: 100px;
+    height: 80px;
+    width: auto;
     /*position: absolute;
     right: 50px;
     top:10px;
@@ -340,6 +373,9 @@ h3{
     gap: 20px 50px;
     align-items: center;
     margin:10px 5%;
+    animation:animate both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 20vh;
 }
 label{
     font-size: 20px;
@@ -398,4 +434,3 @@ button:hover{
 #heart{
     color:rgb(24, 180, 198);
 }
-
