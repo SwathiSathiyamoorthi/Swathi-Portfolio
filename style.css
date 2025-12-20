@@ -464,11 +464,21 @@ button:hover{
 .roles-flex p,roles{
     font-size: 40px;
 }
+ .pro a img{
+    width:50px;
+    size: 100px;
+}
 .grid{
-    grid-template-columns: 1fr;
-    justify-items: center;
+    grid-template-columns:auto;
 }
 .form{
     width: 100%;
+}
+.pro{
+    display:grid;
+    grid-template-columns:1fr;
+}
+img .images{
+    width: 10px;
 }
 }
