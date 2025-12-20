@@ -296,6 +296,9 @@ h3{
     animation: slidi both;
     animation-timeline: view();
 }
+.pro a img{
+    width:400px;
+}
 .project-info{
     display:flex;
     flex-direction: column;
@@ -447,8 +450,8 @@ button:hover{
     color:rgb(24, 180, 198);
 }
 @media (max-width:600px){
-.content h1{
-    font-size: 60px;
+.content h1,.logo{
+    font-size: 40px;
 }
 .imagess{
     display: none;
@@ -462,11 +465,10 @@ button:hover{
     font-size:0px;
 }
 .roles-flex p,roles{
-    font-size: 40px;
+    font-size: 30px;
 }
  .pro a img{
-    width:50px;
-    size: 100px;
+    width:200px;
 }
 .grid{
     grid-template-columns:auto;
@@ -478,7 +480,27 @@ button:hover{
     display:grid;
     grid-template-columns:1fr;
 }
-img .images{
-    width: 10px;
+.courses img{
+    width: 40px;
+    height: auto;
+}
+.roles{
+    font-size:20px;
+    margin:7px;
+}
+.content p{
+    font-size: 20px;
+}
+.job-roles{
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    height: 34px;
+    width: auto;
+    border-radius:7px;
+    overflow: hidden;
+}
+.roles-flex{
+    height: 10px;
 }
 }
