@@ -49,11 +49,12 @@ h2{
 }
 .images:hover{
     cursor:pointer;
-    border:3px solid rgb(24, 180, 198);
-    border-radius:10px;
+    border: none;
+    box-shadow:1px 2px 6px;
 }
 .container{
     padding:10px 5%;
+    margin-bottom:200px;
 }
 #header{
     width:100%;
@@ -287,9 +288,18 @@ h3{
     gap:40px;
 }
 .pro{
-    width: 300px;
+    width:auto;
+    display: flex;
+    padding:20px;
+    background-color: rgb(31, 30, 30);
+    gap: 40px;
     animation: slidi both;
     animation-timeline: view();
+}
+.project-info{
+    display:flex;
+    flex-direction: column;
+    
 }
 @keyframes slidi{
     from{
@@ -301,9 +311,11 @@ h3{
         transform: translateX(0);
     }
 }
-.prointro{
+.pro-intro{
     margin:10px 5% 20px;
     font-size: 30px;
+    opacity: 0.7;
+    font-weight:100;
 }
 
 #certifications .container{
@@ -433,4 +445,18 @@ button:hover{
 }
 #heart{
     color:rgb(24, 180, 198);
+}
+@media only screen and (max-width: 600px){
+.imagess{
+    display: none;
+}
+.imagess third{
+    display: block;
+}
+#myname{
+    font-size: 100px;
+}
+.courses h2{
+    font-size:px;
+}
 }
