@@ -53,8 +53,8 @@ h2{
     box-shadow:1px 2px 6px;
 }
 .container{
-    padding:10px 5% auto 0px;
-    margin-bottom:200px;
+    padding:10px 5%;
+    margin-bottom:100px;
 }
 #header{
     width:100%;
@@ -369,7 +369,6 @@ h3{
 }
 
 #contactme .container{
-    width: 100%;
     justify-content: center;
 }
 .form{
@@ -381,12 +380,12 @@ h3{
     height: auto;
     width:auto;
     grid-template-columns:1fr 3fr;
-    gap: 20px 50px;
+    gap: 20px 20px;
     align-items: center;
     margin:10px 5%;
     animation:scaling both;
     animation-timeline: view();
-    animation-range: entry 10% cover 20vh;
+    animation-range: entry 20% cover 70vh;
 }
 label{
     font-size: 20px;
@@ -460,21 +459,24 @@ nav{
     align-items: center;
 }
 .logo img{
-    width:20px;
+    width:15px;
     height: auto;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 .logo h1{
     font-size:15px;
 }
 .links li a{
-    font-size:12px;
+    font-size: 15px;
 }
 nav ul li{
     list-style:none;
     display: inline;
     margin: 15px 3px;
     position:relative;
+}
+.so-links a img{
+    width: 15px;
 }
 .content h1{
     font-size: 40px;
@@ -577,38 +579,8 @@ input{
     overflow: hidden;
 }
 .roles{
-    color:rgb(24, 180, 198);
-    display: block;
-    position: relative;
-    animation:titles 6s infinite alternate-reverse;
     height: 100%;
     font-size: 15px;  
-}
-@keyframes titles{
-    10%{
-       transform: translateY(2%);
-    } 
-    25%{
-        transform: translateY(-102%);
-    }
-    35%{
-        transform: translateY(-100%);
-    }
-    50%{
-         transform: translateY(-202%);
-    }
-    60%{
-        transform: translateY(-200%);
-    }
-    75%{
-        transform: translateY(-302%);
-    }
-    85%{
-        transform: translateY(-300%);
-    }
-    100%{
-        transform: translateY(-402%);
-    }
 }
 .certificate-con{
     gap:10px;
