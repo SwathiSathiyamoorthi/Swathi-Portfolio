@@ -450,19 +450,50 @@ button:hover{
     color:rgb(24, 180, 198);
 }
 @media (max-width:600px){
-.content h1,.logo{
+img{
+    width:100px;
+}
+nav{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.logo{
+    margin-top:10px;
+}
+.logo img{
+    width:20px;
+    height: auto;
+    margin-right: 10px;
+}
+.logo h1{
+    font-size:12px;
+}
+.links li a{
+    font-size:10px;
+}
+nav ul li{
+    list-style:none;
+    display: inline;
+    margin: 15px 3px;
+    position:relative;
+}
+.content h1{
     font-size: 40px;
 }
 .imagess{
     display: none;
-   
 }
 .imagess.third{
     display: block;
-     width: 100%;
+    width: 100%;
 }
 .courses h2{
-    font-size:0px;
+    font-size:15px;
+}
+.courses p{
+    font-size:10px;
 }
 .roles-flex p,roles{
     font-size: 30px;
@@ -484,23 +515,83 @@ button:hover{
     width: 40px;
     height: auto;
 }
-.roles{
-    font-size:20px;
-    margin:7px;
-}
 .content p{
     font-size: 20px;
+}
+.form{
+    gap:10px;
+    padding:15px 20px 15px 20px;
+}
+label{
+    font-size: 10px;
+    color:rgb(255, 255, 255);
+}
+input{
+    background-color: rgb(74, 72, 72);
+    color: white;
+    height:20px;
+    border-radius: 4px;
+    padding:10px 10px;
+    outline: none;
+    border: none;
+}
+ textarea{
+    background-color: rgb(74, 72, 72);
+    color: white;
+    border-radius: 4px;
+    padding:10px 10px;
+    outline: none;
+    border: none;
+}
+.roles-flex{
+    display: flex;
+    gap:5px;
+}
+.roles-flex p{
+    font-size: 20px;
+    margin-top: -6px;
 }
 .job-roles{
     display: flex;
     flex-direction: column;
     justify-items: flex-start;
-    height: 34px;
+    height: 20px;
     width: auto;
     border-radius:7px;
     overflow: hidden;
 }
-.roles-flex{
-    height: 10px;
+.roles{
+    color:rgb(24, 180, 198);
+    display: block;
+    position: relative;
+    animation:titles 6s infinite alternate-reverse;
+    height: 100%;
+    font-size: 15px;  
+}
+@keyframes titles{
+    10%{
+       transform: translateY(2%);
+    } 
+    25%{
+        transform: translateY(-102%);
+    }
+    35%{
+        transform: translateY(-100%);
+    }
+    50%{
+         transform: translateY(-202%);
+    }
+    60%{
+        transform: translateY(-200%);
+    }
+    75%{
+        transform: translateY(-302%);
+    }
+    85%{
+        transform: translateY(-300%);
+    }
+    100%{
+        transform: translateY(-402%);
+    }
 }
 }
