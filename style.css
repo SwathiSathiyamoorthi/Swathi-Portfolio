@@ -460,7 +460,7 @@ nav{
     align-items: center;
 }
 .logo{
-    margin-top:10px;
+    margin-top:15px;
 }
 .logo img{
     width:20px;
@@ -468,10 +468,10 @@ nav{
     margin-right: 10px;
 }
 .logo h1{
-    font-size:12px;
+    font-size:15px;
 }
 .links li a{
-    font-size:10px;
+    font-size:15px;
 }
 nav ul li{
     list-style:none;
@@ -593,5 +593,8 @@ input{
     100%{
         transform: translateY(-402%);
     }
+}
+.certificate-con{
+    gap:10px;
 }
 }
